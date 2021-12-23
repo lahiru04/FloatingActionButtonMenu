@@ -63,60 +63,92 @@ You can install this with [Gradle](#gradle) , [Maven](#maven) , [sbt](#sbt) or [
  
  ## Usage
  
-    <com.github.clans.fab.FloatingActionMenu
-         android:id="@+id/menu"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_alignParentBottom="true"
-         android:layout_alignParentRight="true"
-         android:layout_marginRight="10dp"
-         android:layout_marginBottom="10dp"
-         android:layout_marginLeft="10dp"
-         fab:menu_fab_size="normal"
-         fab:menu_showShadow="true"
-         fab:menu_shadowColor="#66000000"
-         fab:menu_shadowRadius="4dp"
-         fab:menu_shadowXOffset="1dp"
-         fab:menu_shadowYOffset="3dp"
-         fab:menu_colorNormal="#DA4336"
-         fab:menu_colorPressed="#E75043"
-         fab:menu_colorRipple="#99FFFFFF"
-         fab:menu_animationDelayPerItem="50"
-         fab:menu_icon="@drawable/fab_add"
-         fab:menu_buttonSpacing="0dp"
-         fab:menu_labels_margin="0dp"
-         fab:menu_labels_showAnimation="@anim/fab_slide_in_from_right"
-         fab:menu_labels_hideAnimation="@anim/fab_slide_out_to_right"
-         fab:menu_labels_paddingTop="4dp"
-         fab:menu_labels_paddingRight="8dp"
-         fab:menu_labels_paddingBottom="4dp"
-         fab:menu_labels_paddingLeft="8dp"
-         fab:menu_labels_padding="8dp"
-         fab:menu_labels_textColor="#FFFFFF"
-         fab:menu_labels_textSize="14sp"
-         fab:menu_labels_cornerRadius="3dp"
-         fab:menu_labels_colorNormal="#333333"
-         fab:menu_labels_colorPressed="#444444"
-         fab:menu_labels_colorRipple="#66FFFFFF"
-         fab:menu_labels_showShadow="true"
-         fab:menu_labels_singleLine="false"
-         fab:menu_labels_ellipsize="none"
-         fab:menu_labels_maxLines="-1"
-         fab:menu_labels_style="@style/YourCustomLabelsStyle"
-         fab:menu_labels_position="left"
-         fab:menu_openDirection="up"
-         fab:menu_backgroundColor="@android:color/transparent"
-         fab:menu_fab_label="your_label_here"
-         fab:menu_fab_show_animation="@anim/my_show_animation"
-         fab:menu_fab_hide_animation="@anim/my_hide_animation">
- 
-         <com.github.clans.fab.FloatingActionButton
-             android:id="@+id/menu_item"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:src="@drawable/ic_star"
-             fab:fab_size="mini"
-             fab:fab_label="Menu item 1" />
- 
-     </com.github.clans.fab.FloatingActionMenu>
+    <com.religious.floatingx.FloatingActionMenu
+            android:id="@+id/menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginRight="@dimen/fab_margin"
+            android:layout_marginBottom="@dimen/fab_margin"
+            app:menu_colorNormal="@color/colorPrimary"
+            app:menu_colorPressed="@color/colorPrimary1"
+            app:menu_colorRipple="@color/black">
+
+            <com.religious.floatingx.FloatingActionButtonx
+                android:id="@+id/fabSalesOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_colorNormal="@color/colorPrimary"
+                app:fab_label="Sales Order"
+                app:srcCompat="@drawable/ic_baseline_order_24" />
+
+            <com.religious.floatingx.FloatingActionButtonx
+                android:id="@+id/fabPendingOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:fab_colorNormal="@color/colorPrimary"
+                app:fab_label="Pending Order"
+                app:srcCompat="@drawable/ic_baseline_order_24" />
+
+
+            <com.religious.floatingx.FloatingActionButtonx
+                android:id="@+id/fabInvoice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_colorNormal="@color/colorPrimary"
+                app:fab_label="Invoice"
+                app:srcCompat="@drawable/ic_baseline_order_24" />
+
+            <com.religious.floatingx.FloatingActionButtonx
+                android:id="@+id/fabReturnNote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_colorNormal="@color/colorPrimary"
+                app:fab_label="Return Note"
+                app:srcCompat="@drawable/ic_baseline_remove_shopping_cart_24" />
+
+            <com.religious.floatingx.FloatingActionButtonx
+                android:id="@+id/fabUnproductive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_colorNormal="@color/colorPrimary"
+                app:fab_label="Unproductive"
+                app:srcCompat="@drawable/ic_baseline_unproductive_24" />
+
+            <com.religious.floatingx.FloatingActionButtonx
+                android:id="@+id/fabPosm"
+                android:layout_width="wrap_content"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                app:fab_colorNormal="@color/colorPrimary"
+                app:fab_label="POSM"
+                app:srcCompat="@drawable/ic_baseline_posm_24" />
+
+            <com.religious.floatingx.FloatingActionButtonx
+                android:id="@+id/fabmMrchandising"
+                android:layout_width="wrap_content"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                app:fab_colorNormal="@color/colorPrimary"
+                app:fab_label="Merchandising"
+                app:srcCompat="@drawable/ic_baseline_merchandise_24" />
+
+            <com.religious.floatingx.FloatingActionButtonx
+                android:id="@+id/fabCompetitorAnalysis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_colorNormal="@color/colorPrimary"
+                app:fab_label="Competitor Analysis"
+                app:srcCompat="@drawable/ic_baseline_directions_run_24" />
+
+            <com.religious.floatingx.FloatingActionButtonx
+                android:id="@+id/fabAddGondola"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_colorNormal="@color/colorPrimary"
+                app:fab_label="Add Gondola"
+                app:srcCompat="@drawable/ic_baseline_gondola_24" />
+
+        </com.religious.floatingx.FloatingActionMenu>
  
